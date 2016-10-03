@@ -1,0 +1,28 @@
+---
+title: "report"
+author: "Alexander Lee"
+date: "October 7, 2016"
+output: pdf_document
+---
+
+
+#Abstract
+
+This report seeks to replicate the research found in *Simple Linear Regression*, chapter 3 of the book **An Introduction to Statistical Learning** by Gareth James, et al., on a set of advertising data.
+
+#Introduction
+
+The goal of this research is to use existing data to formulate a marketing plan that will result in higher product sales. To that end,
+
+This project also serves as an introduction to linear regression and as an exercise in using R commands from the command line. 
+
+#Data
+
+
+#Methodology
+
+
+#Results
+
+
+#Conclusions
