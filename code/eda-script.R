@@ -1,5 +1,6 @@
 
 library(readr)
+library(xtable)
 
 advertising <- read.csv("../data/Advertising.csv")
 
@@ -30,14 +31,14 @@ tv_summ <- summary(advertising$TV)
 sales_summ <- summary(advertising$Sales)
 
 #build eda-output.txt file
-sink("../data/eda-output.txt", append = T)
 cat(c("Summary Statistics for TV\n"),
     file = "../data/eda-output.txt", sep = "\n")
+sink("../data/eda-output.txt", append = T)
 tv_summ
 
-cat("\nSummary Statistics for Sales\n",
-    file = "../data/eda-output.txt", sep = "\n", append = T)
+print("\nSummary Statistics for Sales\n")
 sales_summ
+
 sink()
 
 
