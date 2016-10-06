@@ -1,6 +1,6 @@
 
 library(readr)
-library(xtable)
+#setwd("~/Berkeley/Fall 2016/Stat159/stat159-fall2016-hw02/code")
 advertising <- read.csv('../data/Advertising.csv')
 
 #perform the lm() regression
@@ -8,11 +8,8 @@ ad_reg <- lm(formula = Sales ~ TV, data = advertising)
 
 ad_summ <- summary(ad_reg)
 
-save(ad_reg, ad_summ, file = '../data/Regression.RData')
+save(advertising, ad_reg, ad_summ, file = '../data/Regression.RData')
 
-
-reg_table <- xtable(ad_reg)
-print(reg_table, type = 'html', file = '../images/reg-table.html')
 
 png('../images/scatterplot-tv-sales.png')
 plot(advertising$TV, advertising$Sales,

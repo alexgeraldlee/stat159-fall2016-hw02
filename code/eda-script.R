@@ -1,7 +1,6 @@
 
 library(readr)
-library(xtable)
-
+setwd("~/Berkeley/Fall 2016/Stat159/stat159-fall2016-hw02/code")
 advertising <- read.csv("../data/Advertising.csv")
 
 #make histograms and store them in appropriate files
