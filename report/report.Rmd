@@ -34,16 +34,14 @@ That is, we predict there to be a linear relationship between the amount of mone
 We computed the correlation coefficients using the lm() function, with `TV` as a function of `Sales`. 
 
 ```{r, echo=T}
-print('Table 1: Information about Regression Coefficients')
-ad_summ$coefficients
-
-print(paste0('Correlation coefficient: ', ad_summ$r.squared))
+print('Table 1: Information about the Linear Regression')
+ad_summ
 ```
 
-The estimates of these coefficients, a and b, are 7.033 and .048, respectively; that is, for every $1,000 increase in spending on TV advertising, sales are projected to increase by 48 units. With an R^2^ of .612, that means 61.2% of the variability is explained by the model. 
+The estimates of these coefficients, a and b, are 7.033 and .048, respectively; that is, for every $1,000 increase in spending on TV advertising, sales are projected to increase by 48 units. On average, data will deviate from the true regression model by 3.259. An R^2^ of .612, means 61.2% of the variability is explained by the model. An F-statistic of 312.1 means that the coefficients found by our model are very likely to be close to the true regression values.
 
 ![Scatterplot of TV vs Sales](../images/scatterplot-tv-sales.png "Positive Correlation between TV budget and Sales")
 
 
 #Conclusions
-There is a positive correlation between the budget for TV advertising and Sales; however, this relationship is very minimal. For every $1,000 spent on advertising only another 48 units are sold, so each unit would have to cost at least $20.84 in order to make a profit off the units sold. 
+There is a positive correlation between the budget for TV advertising and Sales; however, this relationship is very minimal. For every $1,000 spent on advertising only another 48 units are sold, so each unit would have to cost at least $20.84 in order to break even or profit off the units sold. 

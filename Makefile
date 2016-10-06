@@ -1,5 +1,5 @@
 
-reports = report/report.Rmd data/regression.RData images/scatterplot-tv-sales.png
+reports = report/report.Rmd images/scatterplot-tv-sales.png data/regression.RData 
 RMDFILE = report/report
 
 all: report.pdf eda-output.txt regression.RData
@@ -11,9 +11,12 @@ data:
 clean:
 	rm report/report.pdf
 
+#report.pdf: $(reports)
+#	cd report && Rscript -e "require(knitr); require(rmarkdown); render('report.Rmd', output_file = 'report.pdf')"
+
 report.pdf: $(reports)
-	Rscript -e "require(knitr); require(markdown); knit('$(RMDFILE).rmd', '$(RMDFILE).md'); markdownToHTML('$(RMDFILE).md', '$(RMDFILE).html', options=c('use_xhml'))"
-	pandoc -s $(RMDFILE).html -o report/report.html
+	cd report && Rscript -e "require(knitr); require(rmarkdown); require(xtable); render('report.Rmd', 'pdf_document')
+
 
 regression.Rdata: code/regression-script.R data/Advertising.csv
 	cd code && Rscript regression-script.R

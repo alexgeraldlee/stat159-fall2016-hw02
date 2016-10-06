@@ -1,0 +1,3 @@
+#Data
+
+This directory contains the [Advertising.csv](http://www-bcf.usc.edu/~gareth/ISL/Advertising.csv) file from the book *An Introduction to Statistical Learning* by Gareth James, Daniela Witten, Trevor Hastie and Robert Tibshirani, along with `eda-output.txt`, which contains the summary statistics of the `TV` and `Sales` columns of the `Advertising` data, and `Regression.RData`, which contains the R objects for the linear regression performed on `TV` and `Sales`. 
